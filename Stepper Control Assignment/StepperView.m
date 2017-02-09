@@ -10,12 +10,11 @@
 
 @implementation StepperView
 
+
+
 -(instancetype) initWithFrame:(CGRect)frame {
     
     self = [super initWithFrame:frame];
-    
-    self.stepperValue = 0;
-    
     
     self.stepperView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 300, 75)];
     //self.stepperView = [[UIView alloc]initWithFrame:frame];
@@ -25,7 +24,7 @@
     [self addSubview:self.stepperView];
     
     self.stepperLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
-    self.stepperLabel.text = [NSString stringWithFormat:@"%d", self.stepperValue];
+    self.stepperLabel.text = [NSString stringWithFormat:@"%d", self.i];
     self.stepperLabel.textAlignment = NSTextAlignmentCenter;
     self.stepperLabel.backgroundColor = [UIColor whiteColor];
     self.stepperLabel.center = CGPointMake(self.stepperView.frame.size.width/2, self.stepperView.frame.size.height/2);
@@ -50,28 +49,23 @@
     
     [self.stepperView addSubview:self.plusButton];
     
-    
     return self;
-    
-    
- 
+
 }
 
 
 -(void) minusButtonPressed{
     
-    self.stepperValue--;
-    
-    NSLog(@"minus button pressed");
+    self.i--;
+    self.stepperLabel.text = [NSString stringWithFormat:@"%d", self.i];
     
 }
 
 -(void) plusButtonPressed{
     
-    self.stepperValue++;
-    
-    NSLog(@"plus button pressed");
-    
+    self.i++;
+    self.stepperLabel.text = [NSString stringWithFormat:@"%d", self.i];
+
 }
 
 

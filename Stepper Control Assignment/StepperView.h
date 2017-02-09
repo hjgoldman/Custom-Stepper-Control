@@ -15,6 +15,6 @@
 @property (nonatomic,strong) UIButton *minusButton;
 @property (nonatomic,strong) UIButton *plusButton;
 
-@property (nonatomic, assign) int stepperValue;
+@property (nonatomic, assign) int i;
 
 @end
