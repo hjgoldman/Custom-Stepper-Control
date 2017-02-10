@@ -22,8 +22,14 @@
     stepperView.center = self.view.center;
     [self.view addSubview:stepperView];
     
+    stepperView.delegate = self;
 }
 
+-(void) stepperViewValue:(int)stepperValue{
+    
+    NSLog(@"%d", stepperValue);
+    
+}
 
 
 @end

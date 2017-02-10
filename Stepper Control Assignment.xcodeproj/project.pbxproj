@@ -63,10 +63,10 @@
 			children = (
 				3AA3E1CE1E4CEFD1004305FC /* AppDelegate.h */,
 				3AA3E1CF1E4CEFD1004305FC /* AppDelegate.m */,
-				3AA3E1E51E4CFFE8004305FC /* StepperView.h */,
-				3AA3E1E61E4CFFE8004305FC /* StepperView.m */,
 				3AA3E1D11E4CEFD1004305FC /* ViewController.h */,
 				3AA3E1D21E4CEFD1004305FC /* ViewController.m */,
+				3AA3E1E51E4CFFE8004305FC /* StepperView.h */,
+				3AA3E1E61E4CFFE8004305FC /* StepperView.m */,
 				3AA3E1D41E4CEFD1004305FC /* Main.storyboard */,
 				3AA3E1D71E4CEFD1004305FC /* Assets.xcassets */,
 				3AA3E1D91E4CEFD1004305FC /* LaunchScreen.storyboard */,
@@ -318,6 +318,7 @@
 				3AA3E1E11E4CEFD1004305FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

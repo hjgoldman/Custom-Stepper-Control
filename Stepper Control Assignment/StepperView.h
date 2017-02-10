@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol StepperViewDelegate<NSObject>
+
+-(void) stepperViewValue:(int) stepperValue;
+
+@end
+
 @interface StepperView : UIView
 
 @property (nonatomic,strong) UIView *stepperView;
@@ -16,5 +22,8 @@
 @property (nonatomic,strong) UIButton *plusButton;
 
 @property (nonatomic, assign) int i;
+
+@property (nonatomic,weak) id<StepperViewDelegate> delegate;
+
 
 @end
