@@ -19,13 +19,19 @@
     
     
     StepperView *stepperView = [[StepperView alloc]initWithFrame:CGRectMake(0, 0, 300, 75)];
-    stepperView.center = self.view.center;
     [self.view addSubview:stepperView];
     
+    stepperView.center = self.view.center;
+    
     stepperView.delegate = self;
+    
+    
+     
 }
 
 -(void) stepperViewValue:(int)stepperValue{
+    
+    //self.displayLabel.text = [NSString stringWithFormat:@"%d",stepperValue];
     
     NSLog(@"%d", stepperValue);
     

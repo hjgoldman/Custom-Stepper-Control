@@ -14,11 +14,15 @@
 
 -(instancetype) initWithFrame:(CGRect)frame {
         
-    self = [super initWithFrame:frame];
+   // self = [super initWithFrame:frame];
+     self = [super initWithFrame:CGRectMake(0, 0, 300, 50)];
     
-    self.stepperView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 300, 75)];
-    //self.stepperView = [[UIView alloc]initWithFrame:frame];
-    self.stepperView.backgroundColor = [UIColor lightGrayColor];
+    self.stepperView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 300, 50)];
+   // self.stepperView = [[UIView alloc]initWithFrame:frame];
+    self.stepperView.backgroundColor = [UIColor colorWithRed:0.5765f
+                                                       green:0.8000f
+                                                        blue:0.8667f
+                                                       alpha:1.0f];
     self.stepperView.center = self.center;
     
     [self addSubview:self.stepperView];
@@ -33,20 +37,26 @@
     [self.stepperView addSubview:self.stepperLabel];
     
     self.minusButton = [[UIButton alloc]init];
-    self.minusButton.frame = CGRectMake(0, 0, 75, 75);
-    self.minusButton.backgroundColor =[UIColor grayColor];
+    self.minusButton.frame = CGRectMake(0, 0, 100, 50);
+    self.minusButton.backgroundColor =[UIColor colorWithRed:0.9961f
+                                                      green:0.8000f
+                                                       blue:0.7961f
+                                                      alpha:1.0f];
     self.minusButton.titleLabel.font = [UIFont systemFontOfSize:30];
-    self.minusButton.center = CGPointMake(37.5, self.stepperView.frame.size.height/2);
+    self.minusButton.center = CGPointMake(50, self.stepperView.frame.size.height/2);
     [self.minusButton setTitle:@"-" forState:UIControlStateNormal];
     [self.minusButton addTarget:self action:@selector(minusButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     
     [self.stepperView addSubview:self.minusButton];
     
     self.plusButton = [[UIButton alloc]init];
-    self.plusButton.frame = CGRectMake(0, 0, 75, 75);
-    self.plusButton.backgroundColor =[UIColor grayColor];
+    self.plusButton.frame = CGRectMake(0, 0, 100, 50);
+    self.plusButton.backgroundColor =[UIColor colorWithRed:0.9961f
+                                                     green:0.8000f
+                                                      blue:0.7961f
+                                                     alpha:1.0f];
     self.plusButton.titleLabel.font = [UIFont systemFontOfSize:30];
-    self.plusButton.center = CGPointMake(262.5, self.stepperView.frame.size.height/2);
+    self.plusButton.center = CGPointMake(250, self.stepperView.frame.size.height/2);
     [self.plusButton setTitle:@"+" forState:UIControlStateNormal];
     [self.plusButton addTarget:self action:@selector(plusButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     
@@ -73,12 +83,26 @@
 }
 
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
+
 - (void)drawRect:(CGRect)rect {
     // Drawing code
+    
+    if (self.minusText == nil){
+        [self.minusText isEqualToString:@"-"];
+    } else {
+        self.minusButton.titleLabel.text = self.minusText;
+    };
+    
+    if (self.plusText == nil){
+        [self.plusText isEqualToString:@"+"];
+    } else {
+        self.plusButton.titleLabel.text = self.plusText;
+    };
+
+    self.layer.cornerRadius = self.cornerRadius;
+    self.layer.masksToBounds = YES;
+    
 }
-*/
+
 
 @end

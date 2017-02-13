@@ -14,7 +14,14 @@
 
 @end
 
+IB_DESIGNABLE
+
 @interface StepperView : UIView
+
+@property (nonatomic,assign) IBInspectable float cornerRadius;
+@property (nonatomic,copy) IBInspectable NSString *minusText;
+@property (nonatomic,copy) IBInspectable NSString *plusText;
+
 
 @property (nonatomic,strong) UIView *stepperView;
 @property (nonatomic,strong) UILabel *stepperLabel;
